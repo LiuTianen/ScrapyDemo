@@ -59,7 +59,7 @@ SPIDER_MODULES = ['bizhi.spiders']
 NEWSPIDER_MODULE = 'bizhi.spiders'
 
 # 设置图片存储目录
-IMAGES_STORE = 'D:\ImagesRename'
+IMAGES_STORE = 'D:\XXXX'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'bizhi (+http://www.yourdomain.com)'
@@ -68,6 +68,7 @@ IMAGES_STORE = 'D:\ImagesRename'
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
+#降低并发请求数，防止出现<429>错误
 CONCURRENT_REQUESTS = 1
 
 # Configure a delay for requests for the same website (default: 0)

@@ -18,9 +18,9 @@ class BizhiPipeline(ImagesPipeline):
 
     def file_path(self, request, response=None, info=None):
         name = request.meta['item']
+        #文件夹名称过滤，此处用的是分辨率作为关键字，所以不做过滤
         # name = re.sub(r'[？\\*|“<>:/()0123456789]', '', name)
         image_guid = request.url.split('/')[-1]
-        # name2 = request.url.split('/')[-2]
         filename = u'/{0}/{1}'.format(name, image_guid)
         return filename
         # return 'full/%s' % (image_guid)

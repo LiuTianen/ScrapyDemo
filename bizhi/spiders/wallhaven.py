@@ -14,6 +14,7 @@ class WallhavenSpider(scrapy.Spider):
     # start_url = 'https://wallhaven.cc/search?categories=111&purity=100&resolutions=1920x1080&sorting=date_added&order=desc&page={pagenum}'
 
     def start_requests(self):
+        #页数，只需要修改这里即可
         for page in range(10,30):
             yield Request(self.start_url.format(times=time.time(),pagenum=page))
 
